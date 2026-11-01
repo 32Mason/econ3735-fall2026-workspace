@@ -21,12 +21,29 @@ See [GitHub's automatic deletion policy](https://docs.github.com/en/codespaces/s
 2. Choose **Use this template → Open in a codespace**. Wait for the container to finish building; it
    installs Claude Code and the spreadsheet tools.
 3. In the terminal, type `claude` and press Enter. Choose your Claude account login and follow the
-   browser prompt. Use your Claude Pro subscription rather than an API billing account.
-4. Ask Claude: `What skills do you have available?` It should list **steering-log**.
-5. Confirm `data/`, `templates/`, and `.claude/skills/steering-log/` are present.
+   browser prompt. Use your Claude Pro subscription rather than an API billing account. After you sign
+   in, type `/exit` and run `claude` again so it loads the skills from your Claude account.
+4. Ask Claude: `What skills do you have available?` It should list **steering-log**. If it doesn't,
+   check that the skill is uploaded and turned on in Claude under **Customize → Skills** (Module 1
+   setup), then restart Claude Code.
+5. Confirm `data/` and `templates/` are present.
 
 If the template is unavailable, Blackboard's Codespaces Setup page includes the same workspace as
 a ZIP, with browser-only setup steps. If you're reading this inside your Codespace, start at step 3.
+
+## Account skills and local skills
+
+| | Account skill | Local skill |
+|---|---|---|
+| Where it lives | Your Claude account, under **Customize → Skills** | This workspace, in `.claude/skills/` |
+| Where it works | Claude in your browser, the Excel add-in, and Claude Code when you sign in with the same account. It syncs on its own. | Claude Code in this Codespace only. It doesn't sync to your account. |
+| To change it | Upload a new version in Claude. Restart Claude Code if it doesn't pick up the change. | Ask Claude Code to update it, or edit `SKILL.md` yourself. |
+| Examples | steering-log (Module 1), q3-data-brief | Your First Skill |
+
+To use a local skill in your browser too, zip its folder and upload it in Claude. The uploaded copy is
+separate from the local one. Claude Code then sees both, and changes you make here don't reach the
+uploaded copy until you upload again. While you're still testing a skill, keep it local, or turn the
+uploaded copy off.
 
 ## Every session
 
@@ -34,7 +51,8 @@ a ZIP, with browser-only setup steps. If you're reading this inside your Codespa
   create a new one each time, and don't delete it until you've downloaded everything.
 - Start Claude Code with `claude` in the terminal.
 - Export the assignment's chat history and download your files and steering log. Use different
-  filenames for each assignment so a new export doesn't overwrite an earlier one.
+  filenames for each assignment so a new export doesn't overwrite an earlier one. Name each steering
+  log after its assignment, for example `steering-log-first-skill.md`.
 - Stop your Codespace when you finish so it doesn't use hours while idle: on github.com/codespaces,
   choose **...** next to it, then **Stop codespace**. Stopping it does not prevent later automatic
   deletion.
@@ -59,7 +77,6 @@ a ZIP, with browser-only setup steps. If you're reading this inside your Codespa
 
 | Folder | What it's for |
 |---|---|
-| `.claude/skills/steering-log/` | The course steering log skill. Ask for a steering log at the end of a session, and name it after the assignment, for example `steering-log-first-skill.md`. |
 | `templates/skill-template/` | A starting point for your First Skill (Module 3). Copy it into `.claude/skills/your-skill-name/` and keep your version snapshots in a `versions/` folder inside it. Put your test files in a `test-inputs/` folder at the top level. |
 | `templates/plugin-template/` | A starting point for your Plugin Build (Module 4). |
 | `.claude-plugin/marketplace.json` | Lists your plugin so a classmate can install it (Module 4). Change its `name` to use your own last name. |
