@@ -41,26 +41,27 @@ a ZIP, with browser-only setup steps. If you're reading this inside your Codespa
 
 1. Save all open files. In Claude Code, use `/export assignment-chat.txt` to save the current
    conversation in your course folder; replace the filename with one that identifies the assignment.
-   Export each conversation you need to keep, and save its steering log too. Chat histories stored
-   elsewhere in the Codespace are not automatically included in your repository.
+   Export each conversation you need to keep, and save its steering log too. Claude Code keeps its own
+   record of each conversation outside your course folder, so a conversation you don't export won't be
+   in your backup.
 2. Ask Claude to create a dated ZIP of **all your coursework**: skills, plugins, scripts, datasets,
    reports, spreadsheets, images, decks, web pages, recordings, test results, exported chat histories,
-   and steering logs. Include coursework that hasn't been committed or is ignored by Git. Exclude
+   and steering logs. Include hidden folders such as `.claude/skills`. Exclude
    passwords, API keys, installed software, and older backup ZIPs. Keep the backup private.
 3. Find the ZIP in the Codespace's **Explorer**, right-click it, and choose **Download**. Save it on
    your own computer and keep another copy in OneDrive or another location you control.
 4. Unzip the downloaded copy and open several files, including a plugin or skill, a spreadsheet or
    report, and a chat export. Check that the files are present and readable before relying on it.
 
-**GitHub's Code → Download ZIP contains only the files committed on the selected branch.** It can
-leave out generated files, uncommitted work, and chat histories, so use the complete coursework backup
-above.
+**If you push to GitHub, its Code → Download ZIP is a useful extra copy, but it contains only what you've
+pushed.** It can leave out generated files, work you haven't pushed, and chat histories, so use the
+complete coursework backup above.
 
 ## What's here
 
 | Folder | What it's for |
 |---|---|
-| `.claude/skills/steering-log/` | The course steering log skill. Ask for a steering log at the end of a session. |
+| `.claude/skills/steering-log/` | The course steering log skill. Ask for a steering log at the end of a session, and name it after the assignment, for example `steering-log-first-skill.md`. |
 | `templates/skill-template/` | A starting point for your First Skill (Module 3). Copy it into `.claude/skills/your-skill-name/` and keep your version snapshots in a `versions/` folder inside it. Put your test files in a `test-inputs/` folder at the top level. |
 | `templates/plugin-template/` | A starting point for your Plugin Build (Module 4). |
 | `data/` | Cosmic Crunch data files used in assignments. |
