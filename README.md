@@ -61,7 +61,7 @@ download the complete coursework backup above.
 | Folder | What it's for |
 |---|---|
 | `.claude/skills/steering-log/` | The course steering log skill. Ask for a steering log at the end of a session. |
-| `templates/skill-template/` | A starting point for your First Skill (Module 3). Copy it into `.claude/skills/`. |
+| `templates/skill-template/` | A starting point for your First Skill (Module 3). Copy it into `.claude/skills/your-skill-name/` and keep your version snapshots in a `versions/` folder inside it. Put your test files in a `test-inputs/` folder at the top level. |
 | `templates/plugin-template/` | A starting point for your Plugin Build (Module 4). |
 | `data/` | Cosmic Crunch data files used in assignments. |
 
