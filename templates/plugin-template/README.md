@@ -6,12 +6,20 @@
 
 ## Install
 
-In Claude Code:
+Drag the plugin ZIP into your Codespace's Explorer and unzip it into a folder of its own. In the terminal:
 
 ```
-/plugin marketplace add [your-github-username]/[your-repo-name]
+unzip [plugin-zip-name].zip -d [folder-name]
+```
+
+Then in Claude Code:
+
+```
+/plugin marketplace add ./[folder-name]
 /plugin install [plugin-name]@[marketplace-name]
 ```
+
+`[marketplace-name]` is the `name` in the ZIP's `.claude-plugin/marketplace.json`.
 
 ## Use
 
