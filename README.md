@@ -19,8 +19,7 @@ See [GitHub's automatic deletion policy](https://docs.github.com/en/codespaces/s
 3. In the terminal, type `claude` and press Enter. Choose your Claude account login and follow the
    browser prompt. Use your Claude Pro subscription rather than an API billing account.
 4. Ask Claude: `What skills do you have available?` It should list **steering-log**.
-5. Confirm `data/`, `templates/`, and `.claude/skills/steering-log/` are present, then commit and push
-   any coursework changes to your private repository.
+5. Confirm `data/`, `templates/`, and `.claude/skills/steering-log/` are present.
 
 If the template is unavailable, Blackboard's Codespaces Setup page includes the same workspace as
 a ZIP, with browser-only setup steps. If you're reading this inside your Codespace, start at step 3.
@@ -30,8 +29,9 @@ a ZIP, with browser-only setup steps. If you're reading this inside your Codespa
 - Open your repository on GitHub, then **Code → Codespaces** and pick your existing codespace.
   Don't create a new one each time.
 - Start Claude Code with `claude` in the terminal.
-- Save your work to GitHub before you stop: ask Claude to commit and push, or use the Source Control
-  panel on the left. Confirm the latest files appear on your repository's GitHub page.
+- Optional: before you stop, ask Claude to commit and push, for an extra copy on GitHub. GitHub holds
+  only what you push, so still download your files. Module 4 uses this to share your plugin, and Claude
+  Code runs the git commands for you.
 - Export the assignment's chat history and download your files and steering log. Use different
   filenames for each assignment so a new export doesn't overwrite an earlier one.
 - Stop your Codespace when you finish so it doesn't use hours while idle. Stopping it does not
@@ -53,8 +53,8 @@ a ZIP, with browser-only setup steps. If you're reading this inside your Codespa
    report, and a chat export. Check that the files are present and readable before relying on it.
 
 **GitHub's Code → Download ZIP contains only the files committed on the selected branch.** It can
-leave out generated files, uncommitted work, and chat histories. Commit and push regularly, and also
-download the complete coursework backup above.
+leave out generated files, uncommitted work, and chat histories, so use the complete coursework backup
+above.
 
 ## What's here
 
